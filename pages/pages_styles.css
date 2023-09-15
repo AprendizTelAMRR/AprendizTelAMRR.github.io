@@ -1,3 +1,30 @@
+.nav-link {
+    text-align: left;
+    color: thistle;
+    font-size: 13pt;
+    margin-bottom: 12px;
+
+    transition: 100ms;
+}
+
+.nav-link:last-child {
+    margin-bottom: 40px;
+}
+
+.nav-link:visited {
+    color: thistle;
+}
+
+.nav-link:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.nav-link:active {
+    color: azure;
+    transform: scale(1.1);
+}
+
 header {
     background-color: #032030;
     color: white;
@@ -15,11 +42,11 @@ header {
 }
 
 #back-button:hover {
-    transform: scale(1.05);
+    color: thistle;
 }
 
 #back-button:active {
-    transform: scale(0.95);
+    color: thistle;
 }
 
 h1 {
