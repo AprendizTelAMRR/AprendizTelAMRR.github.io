@@ -1,48 +1,112 @@
-body {
-    background-color: #032030;
-    padding: 0 40px;
-}
-
 main {
-    margin-top: 170px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    margin-top: 10vh;
 }
 
 h1 {
-    font-size: 70pt;
-    display: block;
+    font-size: 36pt;
+    text-align: center;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    width: 100vw;
+    padding: 5vw;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.nav-links-wrapper {
+    margin-top: 5vh;
     background-color: #C92230;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
     padding: 10px;
     border-radius: 16px;
     gap: 10px;
 }
 
-nav a {
-    width: 400px;
-    text-align: center;
-    font-size: 14pt;
-    padding: 20px 0;
-    border-radius: 16px;
-    text-decoration: none;
+.nav-links-wrapper a {
     background-color: #D2636C;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+
+    text-decoration: none;
 
     transition: 150ms ease-in-out;
 }
 
-nav a:hover {
+.nav-links-wrapper a:hover,
+.nav-links-wrapper a:active,
+.nav-links-wrapper a:focus {
     background-color: #D9A7AB;
     transform: scale(1.025);
 }
 
-nav a:active {
-    transform: scale(1.025);
+@media only screen and (max-width: 320px) {
+    h1 {
+        font-size: 30pt;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    main {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .nav-links-wrapper a {
+        font-size: 14pt;
+    }
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        justify-content: space-around;
+    }
+
+    h1 {
+        font-size: 60pt;
+    }
+
+    nav {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    h1 {
+        font-size: 80pt;
+    }
+
+    .nav-links-wrapper a {
+        font-size: 20pt;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    h1 {
+        font-size: 100pt;
+    }
+
+    .nav-links-wrapper {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-links-wrapper a {
+        font-size: 30pt;
+        padding: 30px;
+    }
 }

@@ -1,9 +1,11 @@
 var el = document.getElementById("back-button");
-el.setAttribute("href", "https://aprendiztelamrr.github.io/");
+let homePage = "https://aprendiztelamrr.github.io/"
+homePage = "http://127.0.0.1:5500"
+el.setAttribute("href", homePage);
 
 el.onclick = function () {
-    if (document.referrer != "https://aprendiztelamrr.github.io/") {
-        window.location.href = "https://aprendiztelamrr.github.io/"
+    if (document.referrer != homePage) {
+        window.location.href = homePage
         return false;
     }
 
