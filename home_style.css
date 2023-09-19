@@ -1,7 +1,15 @@
 main {
+    height: 100vh;
+}
+
+.landing-page-content {
     display: flex;
     flex-direction: column;
-    margin-top: 10vh;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-60%);
+
 }
 
 h1 {
@@ -54,7 +62,7 @@ nav {
 }
 
 @media only screen and (min-width: 767px) {
-    main {
+    .landing-page-content {
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -72,7 +80,7 @@ nav {
 }
 
 @media only screen and (min-width: 1024px) {
-    main {
+    .landing-page-content {
         justify-content: space-around;
     }
 

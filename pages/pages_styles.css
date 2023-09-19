@@ -4,7 +4,11 @@ body {
 
 header {
     background-color: #032030;
+    top: 0;
     padding: 10px;
+    position: fixed;
+    width: 100vw;
+    box-sizing: border-box;
 }
 
 header #back-button {
@@ -17,6 +21,10 @@ header #back-button:hover,
 header #back-button:active,
 header #back-button:focus {
     color: thistle;
+}
+
+main {
+    margin-top: 100px;
 }
 
 h1 {
