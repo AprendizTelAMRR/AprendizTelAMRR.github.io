@@ -1,6 +1,130 @@
-main {
-    height: 100vh;
+a {
+    text-decoration: none;
+    transition: 150ms ease-in-out;
 }
+
+a:hover {
+    color: thistle;
+}
+
+
+h1 {
+    font-size: 36pt;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-size: 30pt;
+}
+
+header {
+    padding: 0px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 60px;
+    position: fixed;
+    width: 100vw;
+}
+
+header .site-name {
+    font-size: 20pt;
+    
+}
+
+
+/* 
+    HAMBURGER MENU
+*/
+#menu-toggle{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    flex-direction: center;
+    align-items: center;
+}
+
+#menu-toggle input{
+    display: none;
+}
+
+#menu-toggle span {
+    display: block;
+    position: relative;
+    border-radius: 3px;
+    visibility: visible;
+    width: 30px;
+    background: white;
+    height: 2px;
+    transition: 250ms ease-in-out;
+    z-index: 4;
+}
+
+#menu-toggle span:first-of-type {
+    transform-origin: 0px 0px;
+}
+#menu-toggle span:last-of-type{
+    transform-origin: 0px 2px;
+}
+
+#menu-toggle span:not(:last-child){
+    margin-bottom: 8px;
+}
+
+#menu-toggle input:checked ~ span{
+    background: black;
+}
+
+#menu-toggle input:checked ~ span:first-of-type{
+    transform: rotate(45deg) translateX(0px);
+
+}
+
+#menu-toggle input:checked ~ span:nth-of-type(2){
+    opacity: 0;
+}
+
+#menu-toggle input:checked ~ span:last-of-type{
+    transform: rotate(-45deg);
+}
+
+.header-nav{
+    width: 50vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    transition: 150ms ease-in-out;
+    margin-left: 100vw;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 60px;
+    z-index: 2;
+}
+
+#menu-toggle input:checked ~ .header-nav{
+    margin-left: 50vw;
+    background-color: white;
+}
+
+.header-nav a {
+    color: black;
+}
+
+.header-nav-link{
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+main{
+    height: 100vh;
+    padding-top: 60px;
+    display: flex;
+}
+
 
 .landing-page-content {
     display: flex;
@@ -9,112 +133,4 @@ main {
     width: 100%;
     top: 50%;
     transform: translateY(-60%);
-
-}
-
-h1 {
-    font-size: 36pt;
-    text-align: center;
-}
-
-nav {
-    width: 100vw;
-    padding: 5vw;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.nav-links-wrapper {
-    margin-top: 5vh;
-    background-color: #C92230;
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    border-radius: 16px;
-    gap: 10px;
-}
-
-.nav-links-wrapper a {
-    background-color: #D2636C;
-    padding: 20px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    width: 100%;
-
-    text-decoration: none;
-
-    transition: 150ms ease-in-out;
-}
-
-.nav-links-wrapper a:hover,
-.nav-links-wrapper a:active,
-.nav-links-wrapper a:focus {
-    background-color: #D9A7AB;
-    transform: scale(1.025);
-}
-
-@media only screen and (max-width: 320px) {
-    h1 {
-        font-size: 30pt;
-    }
-}
-
-@media only screen and (min-width: 767px) {
-    .landing-page-content {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    nav {
-        width: 100%;
-    }
-
-    .nav-links-wrapper a {
-        font-size: 14pt;
-    }
-
-
-}
-
-@media only screen and (min-width: 1024px) {
-    .landing-page-content {
-        justify-content: space-around;
-    }
-
-    h1 {
-        font-size: 60pt;
-    }
-
-    nav {
-        width: 45%;
-    }
-}
-
-@media only screen and (min-width: 1920px) {
-    h1 {
-        font-size: 80pt;
-    }
-
-    .nav-links-wrapper a {
-        font-size: 20pt;
-    }
-}
-
-@media only screen and (min-width: 2560px) {
-    h1 {
-        font-size: 100pt;
-    }
-
-    .nav-links-wrapper {
-        padding: 15px;
-        gap: 15px;
-    }
-
-    .nav-links-wrapper a {
-        font-size: 30pt;
-        padding: 30px;
-    }
 }

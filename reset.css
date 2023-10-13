@@ -136,3 +136,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.lynster::after{
+	content: "3405987 // 43mts site: NCD"
+}
