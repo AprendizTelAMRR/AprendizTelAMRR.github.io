@@ -1,3 +1,6 @@
+body{
+    overflow: hidden;
+}
 a {
     text-decoration: none;
     transition: 150ms ease-in-out;
@@ -26,6 +29,7 @@ header {
     height: 60px;
     position: fixed;
     width: 100vw;
+    padding-right: 20px;
 }
 
 header .site-name {
