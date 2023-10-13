@@ -1,6 +1,5 @@
 var el = document.getElementById("back-button");
 let homePage = "https://aprendiztelamrr.github.io/";
-homePage = "http://127.0.0.1:5500/";
 
 el.setAttribute("href", homePage);
 
