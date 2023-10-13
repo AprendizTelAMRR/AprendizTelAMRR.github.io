@@ -64,7 +64,7 @@ header .site-name {
     background: white;
     height: 2px;
     transition: 250ms ease-in-out;
-    z-index: 4;
+    z-index: 6;
 }
 
 #menu-toggle span:first-of-type {
@@ -74,7 +74,7 @@ header .site-name {
     transform-origin: 0px 2px;
 }
 
-#menu-toggle span:not(:last-child){
+#menu-toggle span:not(:last-of-type){
     margin-bottom: 8px;
 }
 
@@ -106,7 +106,7 @@ header .site-name {
     top: 0;
     bottom: 0;
     padding-top: 60px;
-    z-index: 2;
+    z-index: 4;
 }
 
 #menu-toggle input:checked ~ .header-nav{
@@ -127,6 +127,8 @@ main{
     height: 100vh;
     padding-top: 60px;
     display: flex;
+    position: relative;
+    z-index: -1;
 }
 
 
@@ -137,4 +139,61 @@ main{
     width: 100%;
     top: 50%;
     transform: translateY(-60%);
+}
+
+.header-nav-links{
+    z-index: 4;
+    height: 86%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.header-nav-title{
+    color: black;
+    font-size: 20pt;
+    margin-bottom: 30px;
+}
+.header-nav-link{
+    border-bottom: 1px rgb(194, 194, 194) solid;
+    padding-bottom: 10px;
+}
+
+.most-used-links{
+    margin-top: 40px;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.most-used-links ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 80%;
+    border-radius: 8px;
+
+}
+
+.most-used-links-item{
+    font-size: 14pt;
+    background: white;
+    color: black;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.most-used-links-item a {
+    color: black;
+}
+
+.most-used-links-item:not(:last-of-type){
+    margin-bottom: 15px;
 }
