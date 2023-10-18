@@ -259,6 +259,9 @@ main{
         border: none;
         width: auto;
     }
+    #menu-toggle input{
+        display: none;
+    }
 
     #menu-toggle>span{
         display: none;
@@ -284,6 +287,7 @@ main{
         gap: 16px;
         height: auto;
     }
+
     a.header-nav-link{
         display: block;
         margin: 0;
@@ -299,6 +303,14 @@ main{
     a.header-nav-link:hover{
         background: none;
         color: lightsalmon;
+    }
+
+    #menu-toggle, #menu-toggle:focus, #menu-toggle:hover, #menu-toggle:active,
+    .header-nav, .header-nav:focus, .header-nav:hover, .header-nav:active,
+    .header-nav-links, .header-nav-links:focus, .header-nav-links:hover, .header-nav-links:active,
+    .header-nav-title, .header-nav-title:focus, .header-nav-title:hover, .header-nav-title:active,
+    a.header-nav-link, a.header-nav-link:focus, a.header-nav-link:hover, a.header-nav-link:active{
+        background-color: #00000020;
     }
 }
 
