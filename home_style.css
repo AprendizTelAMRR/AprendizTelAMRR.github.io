@@ -196,7 +196,7 @@ main{
     box-shadow: 1px 1px 25px #00000050;
     display: block;
     box-sizing: border-box;
-    width: 98%;
+    width: 100%;
     padding: 10px;
     border-radius: 8px;
     transition: 150ms ease-in-out;
