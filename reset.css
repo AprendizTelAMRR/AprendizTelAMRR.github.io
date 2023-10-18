@@ -91,7 +91,7 @@ video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -112,6 +112,7 @@ section {
 body {
 	background-color: #032030;
 	line-height: 1;
+
 }
 
 ol,

@@ -27,3 +27,10 @@ const hamburgerMenuDiv = document.getElementById("menu-toggle");
 hamburgerMenuDiv.addEventListener("click", () => {
     hamburgerMenuCheckbox.checked = !hamburgerMenuCheckbox.checked;
 })
+
+document.addEventListener("keydown", (event) => {
+    if (event.defaultPrevented) {
+        return; // Do nothing if the event was already processed
+    }
+    if (event.keyCode == 27) { hamburgerMenuCheckbox.checked = false; }
+})

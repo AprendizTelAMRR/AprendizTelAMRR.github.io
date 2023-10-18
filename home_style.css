@@ -12,12 +12,12 @@ a:hover {
 
 
 h1 {
-    font-size: 36pt;
+    font-size: 28pt;
     text-align: center;
 }
 h2{
     text-align: center;
-    font-size: 30pt;
+    font-size: 20pt;
 }
 
 header {
@@ -36,7 +36,6 @@ header {
 
 header .site-name {
     font-size: 20pt;
-    
 }
 
 
@@ -86,7 +85,6 @@ header .site-name {
 
 #menu-toggle input:checked ~ span:first-of-type{
     transform: rotate(45deg) translateX(0px);
-
 }
 
 #menu-toggle input:checked ~ span:nth-of-type(2){
@@ -98,7 +96,7 @@ header .site-name {
 }
 
 .header-nav{
-    width: 50vw;
+    width: 70vw;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -112,7 +110,7 @@ header .site-name {
 }
 
 #menu-toggle input:checked ~ .header-nav{
-    margin-left: 50vw;
+    margin-left: 30vw;
     background-color: white;
 }
 
@@ -181,7 +179,7 @@ main{
 }
 
 .most-used-links-item{
-    font-size: 14pt;
+    font-size: 12pt;
     width: 100%;
     box-sizing: border-box;
     text-align: center;
@@ -221,4 +219,95 @@ main{
 
 .most-used-links-item:not(:last-of-type){
     margin-bottom: 15px;
+}
+
+@media only screen and (min-width:768px){
+    .header-nav{
+        width: 50vw;
+    }
+    #menu-toggle input:checked ~ .header-nav{
+        margin-left: 50vw;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    h1{
+        font-size: 36pt;
+    }
+
+    h2{
+        font-size: 24pt;
+    }
+
+    .most-used-links a{
+        font-size: 14pt;
+    }
+
+    #menu-toggle{
+        display: block;
+        align-items: center;
+        position: static;
+        border: none;
+        width: auto;
+    }
+
+    #menu-toggle>span{
+        display: none;
+    }
+
+    .header-nav{
+        margin-left: 0;
+        position: static;
+        padding: 0;
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+    .header-nav-title{
+        border: none;
+        display: none;
+    }
+    .header-nav-links{
+        display: flex;
+        overflow: hidden;
+        flex-direction: row;
+        background-color: none;
+        gap: 16px;
+        height: auto;
+    }
+    a.header-nav-link{
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: none;
+        color: white;
+        padding-right: 10px;
+    }
+    a.header-nav-link:not(:last-of-type){
+        border-right: 1px white solid;
+    }
+
+    a.header-nav-link:hover{
+        background: none;
+        color: lightsalmon;
+    }
+}
+
+@media only screen and (min-width:1400px){
+    h1{
+        font-size: 36pt;
+    }
+
+    h2{
+        font-size: 24pt;
+    }
+
+    .most-used-links-item a {
+        font-size: 16pt;
+        padding: 20px;
+    }
+
+    a.header-nav-link{
+        font-size: 20pt;
+    }
 }
