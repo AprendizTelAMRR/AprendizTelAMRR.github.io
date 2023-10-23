@@ -16,8 +16,19 @@ el.onclick = function () {
 //Adding Cards
 const sectionUl = document.getElementsByTagName("ul");
 
+let liCount = 1;
+
 function addCard(title, linkObjArray, blank = false) {
     let li = document.createElement("li");
+
+    let counterWrapper = document.createElement("div");
+    counterWrapper.classList.add("counter-wrapper")
+    let counter = document.createElement("p");
+    counter.classList.add("counter")
+    counter.textContent = liCount;
+    liCount++;
+    counterWrapper.appendChild(counter)
+    li.appendChild(counterWrapper);
 
     let h2 = document.createElement("h2");
     h2.classList.add("card-title")

@@ -1,9 +1,4 @@
-body {
-    background-color: black;
-}
-
 header {
-    background-color: #032030;
     top: 0;
     padding: 10px;
     position: fixed;
@@ -41,8 +36,8 @@ ul {
     padding: 0 3vw;
 
     display: grid;
-    row-gap: 40px;
-    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
     column-gap: 3vw;
     justify-content: space-around;
 }
@@ -50,17 +45,33 @@ ul {
 li {
     box-sizing: border-box;
     padding: 16px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
     flex-direction: column;
     border-radius: 16px;
-
-    background-color: #032030;
+    background : linear-gradient(-135deg, rgba(0,0,0,0.25),rgba(0,0,0,0.4));
+    box-shadow: 2px 2px 20px 2px #00000030;
+    transition: 100ms ease-in-out;
 
 }
 
+li:hover{
+    box-shadow: 2px 2px 20px 2px #00000060;
+}
+
+li .counter-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li .counter{
+    font-size: 20pt;
+}
+
 li h2 {
+    text-align: left;
     font-size: 16pt;
-    margin-top: 5px;
     margin-bottom: 20px;
 }
 
@@ -70,6 +81,7 @@ li a {
     margin-bottom: 10px;
     color: thistle;
     transition: 150ms ease-in-out;
+    grid-column: 2;
 
     box-sizing: border-box;
 }
@@ -84,11 +96,6 @@ li a:focus {
 }
 
 @media only screen and (max-width: 320px) {
-    ul {
-        grid-template-columns: 1fr;
-        row-gap: 20px;
-    }
-
     li {
         padding: 10px;
         padding-bottom: 30px;
@@ -100,6 +107,12 @@ li a:focus {
 
     li a {
         font-size: 12pt;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    ul {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -119,11 +132,10 @@ li a:focus {
 
     li h2 {
         font-size: 18pt;
-        text-align: center;
     }
 
     li a {
-        font-size: 14pt;
+        font-size: 12pt;
     }
 }
 
@@ -138,7 +150,7 @@ li a:focus {
     }
 
     li a {
-        font-size: 24pt;
+        font-size: 20pt;
         margin-bottom: 30px;
     }
 }
