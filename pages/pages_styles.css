@@ -19,7 +19,7 @@ header #back-button:focus {
 }
 
 main {
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 h1 {
@@ -27,10 +27,18 @@ h1 {
     margin: 20px 30px;
     text-align: center;
     font-weight: bold;
+    margin-bottom: 40px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 ul {
-    width: 100vw;
+    width: 95vw;
 
     box-sizing: border-box;
     padding: 0 3vw;
