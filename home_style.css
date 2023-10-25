@@ -240,7 +240,7 @@ main{
     }
 }
 
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:1280px){
     h1{
         font-size: 36pt;
     }
@@ -332,6 +332,7 @@ main{
     a.header-nav-link{
         font-size: 12pt;
     }
+    
 }
 
 @media only screen and (min-width:2000px){
