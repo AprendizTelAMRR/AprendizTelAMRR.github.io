@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/reset.css">
+        <link rel="stylesheet" href="/pages/pages_styles.css">
+        <title>Links Tel AM/RR | Sites Importantes</title>
+    </head>
+    <body class="bgcol-blue">
+        <header class="bgcol-blue">
+            <div class="flex" style="display: flex; vertical-align: center;">
+                <a id="back-button" target="_parent">voltar</a>
+            </div>
+        </header>
+        <main>
+            <section class="contatos">
+                <h1>
+                    Sites Importantes
+                </h1>
+                <ul>
+
+                </ul>
+                <hr style="border-width: 1px; border-color: #000000">
+            </section>
+        </main>
+
+        <script src="/global_scripts.js"></script>
+        <script src="/pages/pages_scripts.js"></script>
+        <script>
+            linkObj1 = ["https://nuvem.teltelecom.com.br/login", "Nuvem"]
+            linkObj2 = ["http://suportetel.com.br/sla_no_p1.html", "SLA"]
+            linkObj3 = ["https://csc.teltelecom.com.br/glpi/index.php?redirect=%2Ffront%2Fhelpdesk.public.php?error=3", "Chamados"]
+            addCard("Tel Telecom",[linkObj1,linkObj2,linkObj3],true);
+
+            linkObj1 = ["https://sigitm.vivo.com.br/app/", "Sigitm"]
+            linkObj2 = ["https://www.telefonica-prismaflm.com.br/Prisma4/", "Prisma"]
+            addCard("Vivo",[linkObj1,linkObj2],true);
+
+            linkObj1 = ["https://webmail-seguro.com.br/", "Webmail"]
+            linkObj2 = ["https://onedrive.live.com/", "OneDrive"]
+            linkObj3 = ["https://www.microsoft365.com/?auth=1", "Microsoft 365"]
+            addCard("Área de Trabalho",[linkObj1,linkObj2,linkObj3],true);
+        </script>
+    </body>
+</html>
