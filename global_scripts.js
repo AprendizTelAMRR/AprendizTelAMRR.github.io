@@ -8,7 +8,7 @@ for (var i = 0; i < bgColRed.length; ++i) {
 }
 
 for (var i = 0; i < bgColBlue.length; ++i) {
-    bgColBlue[i].style.backgroundColor = "#202A6B";
+    bgColBlue[i].style.backgroundColor = "#3618AD";
 }
 
 for (var i = 0; i < fgColRed.length; ++i) {
