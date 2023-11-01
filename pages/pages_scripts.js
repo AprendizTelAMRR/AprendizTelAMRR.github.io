@@ -37,7 +37,7 @@ function addCard(title, linkObjArray, blank = false) {
 
     linkObjCount = linkObjArray.length;
 
-    blank = (blank == false) ? "_top" : "_blank";
+    blank = (blank === true) ? "_top" : "_blank";
     for (i = 0; i < linkObjCount; ++i) {
         li.appendChild(
             Object.assign(document.createElement("a"),
