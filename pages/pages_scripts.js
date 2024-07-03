@@ -4,7 +4,7 @@ mas primeiro é checado o histórico. Caso a última página do histórico já f
 ele só volta um no histórico, o que agiliza o acesso já que já tá no cache.*/
 
 var el = document.getElementById("back-button");
-let homePage = "http://127.0.0.1:5500/";
+let homePage = "https://aprendiztelamrr.github.io/";
 el.setAttribute("href", homePage);
 
 el.onclick = function () {
