@@ -1,3 +1,4 @@
+//ColRed é só pra teste, tira aí se quiser
 var bgColRed = document.getElementsByClassName("bgcol-red")
 var bgColBlue = document.getElementsByClassName("bgcol-blue")
 var fgColRed = document.getElementsByClassName("fgcol-red")
@@ -17,10 +18,10 @@ for (var i = 0; i < fgColRed.length; ++i) {
 
 for (var i = 0; i < fgColBlue.length; ++i) {
     fgColBlue[i].style.backgroundColor = "#92C2D1";
-    //20596B
+    //20596B - cor antiga do site
 }
 
-//HAMBURGER MENU
+//HAMBURGER MENU - sim, o site é responsivo, na hora de atualizar o CSS, use mobile-first design
 const hamburgerMenuCheckbox = document.getElementById("menu-toggle-input");
 const hamburgerMenuDiv = document.getElementById("menu-toggle");
 

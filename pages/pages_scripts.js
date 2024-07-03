@@ -1,55 +1,59 @@
-var el = document.getElementById("back-button");
-let homePage = "https://aprendiztelamrr.github.io/";
+/* Eu acho que isso se integra bacana no navegador pra dar uma sensação de app
+o botão de voltar vai sempre garantir voltar pra página inicial,
+mas primeiro é checado o histórico. Caso a última página do histórico já for a página inicial,
+ele só volta um no histórico, o que agiliza o acesso já que já tá no cache.*/
 
+var el = document.getElementById("back-button");
+let homePage = "http://127.0.0.1:5500/";
 el.setAttribute("href", homePage);
 
 el.onclick = function () {
     if (document.referrer != homePage) {
         window.location.href = homePage
-        return false;
+        return;
     }
 
     history.back();
-    return false;
+    return;
 }
 
-//Adding Cards
-const sectionUl = document.getElementsByTagName("ul");
+//Lembrando que cada cartão é enumerado automaticamente
+const cardList = document.getElementsByTagName("ul");
 
-let liCount = 1;
+let cardCount = 1; //enumerador
 
 function addCard(title, linkObjArray, blank = true) {
-    let li = document.createElement("li");
+    let cardElement = document.createElement("li");
 
     let counterWrapper = document.createElement("div");
-    counterWrapper.classList.add("counter-wrapper")
+    counterWrapper.classList.add("counter-wrapper");
+
     let counter = document.createElement("p");
     counter.classList.add("counter")
-    counter.textContent = liCount;
-    liCount++;
+    counter.textContent = cardCount;
+    cardCount++;
     counterWrapper.appendChild(counter)
-    li.appendChild(counterWrapper);
+    cardElement.appendChild(counterWrapper);
 
     let h2 = document.createElement("h2");
     h2.classList.add("card-title")
     h2.textContent = title;
-    li.appendChild(h2);
+    cardElement.appendChild(h2);
 
-    linkObjCount = linkObjArray.length;
 
-    blank = (blank === true) ? "_top" : "_blank";
-    for (i = 0; i < linkObjCount; ++i) {
-        li.appendChild(
+    blank = (blank === true) ? "_blank" : "_top";
+    linkObjArray.forEach(linkObject => {
+        cardElement.appendChild(
             Object.assign(document.createElement("a"),
                 {
-                    href: linkObjArray[i][0],
-                    innerHTML: linkObjArray[i][1],
+                    href: linkObject[0],
+                    innerHTML: linkObject[1],
                     classList: "card-link",
                     target: blank
                 }
             )
         )
-    }
+    });
 
-    sectionUl[0].appendChild(li);
+    cardList[0].appendChild(cardElement);
 }
