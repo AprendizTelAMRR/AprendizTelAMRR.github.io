@@ -18,7 +18,7 @@ const sectionUl = document.getElementsByTagName("ul");
 
 let liCount = 1;
 
-function addCard(title, linkObjArray, blank = false) {
+function addCard(title, linkObjArray, blank = true) {
     let li = document.createElement("li");
 
     let counterWrapper = document.createElement("div");
